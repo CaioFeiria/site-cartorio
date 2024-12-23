@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --color-principal: #FF7D3D;
+    --color-secundaria: #FF6659;
+    --color-titulos: #e96929;
+    --color-subtitulo: #e96929;
+    --color-titulos-footer: #fff7f7;
+    --color-hover: #333;
+    --color-fundo-input: #f7f7f7;
+    --color-fundo-header: #F1F1F1;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: black !important;
+    background-image: url(images/imagem-fundo.png);
+    background-size: cover;
+    background-position: 65%;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 5;
+    padding: 1.2rem;
+    background: linear-gradient(to left, var(--color-fundo-header) 72%,var(--color-principal), var(--color-secundaria));
+}
+
+.nav_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.logo{
+    position: relative;
+    bottom: 0.8rem;
+    left: 0.5rem;
+    align-items: center;
+}
+
+.logout{
+    position: relative;
+    bottom: 0.5rem;
+    align-items: center;
+}
+
+.logout > img:hover{
+    cursor: pointer;
+}
+
+.nav_list{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav_link{
+    text-decoration: none;
+    font-size: 2.7rem;
+    padding: 1.5rem;
+    color: var(--color-titulos);
+}
+
+.nav_link:hover{
+    color: var(--color-hover);
+}
+
+.container_off{
+    display: none;
+}
+
+nav button{
+    position: absolute;
+    display: none;
+}
+
+#dropdown-container{
+    width: 14rem;
+    border-radius: 10px;
+}
+
+#dropdown-container a{
+    display: flex;
+    align-items: center;
+    padding-left: 1.2rem;
+    font-size: 1.3rem;
+}
+
+
+#dropdown-container a:hover{
+    background-color: #FF7C41;
+    border-radius: 6px;
+}
+
+#dropdown-container p{
+    padding-top: 1rem;
+    margin-left: 0.8rem;
+}
+
+#cancelamento{
+    background-color: white;
+    border-radius: 8rem;
+    margin-top: 18rem !important;
+    padding: 2rem;
+}
+
+.barra-horizontal {
+    background-color: var(--color-principal);
+    height: 2px;
+}
+
+#myh1{
+    margin-top: 5rem;
+    color: var(--color-hover);
+    font-size: 4rem;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+}
+
+#myh2{
+    color: var(--color-hover);
+    font-style: italic;
+    font-size: 2rem;
+}
+
+#mycontainer{
+    border-radius: 1.5rem;
+    margin-top: 2rem;
+    padding: 3rem;
+}
+
+#myinput, #file_anuencia, #file_instrumento, #file_multiplo, #file_procuracao{
+    font-size: 1.4rem;
+    border-radius: 0.7rem;
+    background-color: var(--color-fundo-input);
+    padding: 0.8rem;
+}
+
+#div_radio > input{
+    font-size: 1.8rem;
+    background-color: var(--color-fundo-input);
+}
+
+#div_radio > input:checked{
+    background-color: var(--color-titulos);
+    border-color: var(--color-titulos);
+}
+
+#div_radio > label{
+    margin-top: 0.5rem;
+}
+
+#div_radio h3{
+    font-size: 1.8rem;
+    margin-bottom: 0;
+}
+
+#div_date > *{
+    padding: 2.1rem;
+}
+
+#div_date > label{
+    font-size: 0.9rem;
+    margin-left: 2rem;
+    margin-top: 1.4rem;
+    font-weight: 500;
+}
+
+#div_textarea > textarea{
+    height: 12rem;
+    font-size: 2rem;
+    border-radius: 0.7rem;
+    resize: none;
+    background-color: var(--color-fundo-input);
+}
+
+#div_textarea > label{
+    font-size: 1.5rem;
+    margin: 0.5rem;
+    padding: 1.2rem;
+}
+
+#fileCA, #fileIP, #fileOF{
+    display: none;
+}
+
+#mybtn{
+    border: 3px solid var(--color-principal);
+    border-radius: 2.2rem;
+    width: 20%;
+    font-size: 2rem;
+}
+
+#mybtn:hover{
+    background-color: var(--color-secundaria);
+    color: var(--color-titulos-footer);
+}
+
+footer{
+    height: 14.5rem;
+    background: linear-gradient(to top, var(--color-principal), var(--color-secundaria));
+}
+
+.texto_footer{
+    font-size: 1.6rem;
+    color: var(--color-titulos-footer);
+}
+
+.list_links{
+    padding: 0;
+    list-style: none;
+}
+
+.list_links > li{
+    padding: 2rem;
+}
+
+.list_links a{
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--color-titulos-footer);
+}
+
+.list_links a:hover{
+    color: var(--color-hover);
+}
+
+@media (min-width: 1200px) {
+    #mybtn{
+        font-size: 1.7rem;
+        width: 12%;
+        font-weight: 500;
+    }
+
+    #linha_radio{
+        margin: 0 0.5rem 0 3rem !important;
+    }
+}
+
+@media (max-width: 1025px) {
+    .nav_link{
+        font-size: 2rem;
+    }
+
+    #myh1{
+        font-size: 2.3rem;
+    }
+
+    #myh2{
+        font-size: 1.6rem;
+    }
+    
+    #myinput, #file_anuencia, #file_instrumento, #file_multiplo, #file_procuracao{
+        font-size: 1.3rem;
+        padding: 0.8rem;
+    }
+
+    #mybtn{
+        width: 12%;
+        font-size: 1.3rem;
+    }
+
+    .texto_footer{
+        font-size: 1.2rem;
+    }
+
+    .list_links a{
+        font-size: 1.8rem;
+    }
+
+    #div_date > label{
+        margin-left: 0;
+        font-size: 0.8rem;
+        margin-top: 0.8rem;
+        font-weight: 500;
+    }
+
+    #linha_radio{
+        margin: 0 0.5rem 0 3rem !important;
+    }
+}
+
+@media (min-width:770px) {
+    #linha_radio{
+        margin-left: 1rem !important;
+    }
+}
+
+@media (max-width:769px) {
+    header{
+        position: static;
+        padding: 1rem;
+        background: linear-gradient(to left, var(--color-fundo-header) 10%, var(--color-principal) 62%, var(--color-secundaria));
+    }
+    
+    nav button{
+        position: relative;
+        bottom: 0.5rem;
+        display: flex;
+    }
+    
+    .container_off{
+        display: flex;
+        position: absolute;
+    }
+
+    .nav_link{
+        display: none;
+    }
+
+    .nav_link.hum{
+        display: block;
+    }
+
+    .logout{
+        display: none;
+    }
+
+    #offcanvasNavbar{
+        width: 25rem;
+        border-top-left-radius: 35px;
+        background: linear-gradient(to top, var(--color-fundo-header), var(--color-principal) 62%, var(--color-secundaria));
+    }
+
+    #offcanvasNavbar a{
+        color: var(--color-titulos-footer);
+    }
+
+    #logout_off{
+        display: flex;
+        padding: 2rem;
+        justify-content: center;
+    }
+
+    #cancelamento{
+        width: 80%;
+        margin-top: 6rem !important;
+        border-radius: 4rem;
+    }
+
+    #mycontainer{
+        padding: 0;
+    }
+
+    #div_radio > input{
+        font-size: 1.7rem;
+    }
+
+    #div_radio h3{
+        font-size: 1.4rem;
+    }
+
+    #mybtn{
+        width: 15%;
+        font-size: 1.3rem;
+    }
+
+    .list_links a{
+        font-size: 1.5rem;
+    }
+
+    #linha_radio{
+        margin-left: 0 !important;
+    }
+}
+
+@media (max-width: 426px) {
+    #mybtn{
+        font-size: 1.1rem;
+        width: 29%;
+    }
+
+    #cancelamento h1{
+        font-size: 1.9rem;
+    }
+
+    #mycontainer h2{
+        font-size: 1.4rem;
+    }
+
+    .list_links > li{
+        padding: 0.8rem;
+    }
+
+    #linha_radio{
+        margin-left: 1rem !important;
+    }
+
+    footer h4{
+        display: none;
+    }
+}

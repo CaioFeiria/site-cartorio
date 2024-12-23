@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="index.js" defer></script>
+    <title>Cartório Feiria</title>
+</head>
+<body>
+    <Header>
+        <nav class="nav_container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo do cartório" width="50" height="50">
+            </div>
+            <ul class="nav_list">
+                <li><a class="nav_link" href="">Home</a></li>
+                <li><a class="nav_link" href="#cancelamento">Cancelamento de Protesto</a></li>
+                <li><a class="nav_link" href="">Adicionar Título</a></li>
+            </ul>
+            <div class="logout nav-item dropdown">
+                <img src="images/logout.png" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" alt="Logout usuário" width="25" height="25">
+                <ul class="dropdown-menu" id="dropdown-container">
+                    <li><a class="dropdown-item" href="#">
+                        <img src="images/user.png" alt="Icone usuário" width="12" height="12">
+                        <p>Olá Caio</p>
+                    </a></li>
+                    <li><a class="dropdown-item" href="#">
+                        <img src="images/gear.png" alt="Icone engrenagem" width="12" height="12">
+                        <p>Configurações</p>
+                    </a></li>
+                    <li><a class="dropdown-item" href="#">
+                        <img src="images/logout-black.png" alt="Icone engrenagem" width="12" height="12">
+                        <p>Sair</p>
+                    </a></li>
+                </ul>
+            </div>
+            <button id="btn_hamgurger" class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <div class="hamburguer">
+                    <img src="images/menu.png" alt="Menu hamburguer" width="35" height="35">
+                </div>
+            </button>
+            <div class="container_off">
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <ul class="nav_list d-flex flex-column mt-5">
+                        <li><a class="nav_link hum" href="">Home</a></li>
+                        <li><a class="nav_link hum" href="#cancelamento">Cancelamento de Protesto</a></li>
+                        <li><a class="nav_link hum" href="">Adicionar Título</a></li>
+                    </ul>
+                    <div class="logout nav-item dropdown" id="logout_off">
+                        <img src="images/logout-white.png" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" alt="Logout usuário" width="25" height="25">
+                        <ul class="dropdown-menu" id="dropdown-container">
+                            <li><a class="dropdown-item" href="#">
+                                <img src="images/user.png" alt="Icone usuário" width="12" height="12">
+                                <p>Olá Caio</p>
+                            </a></li>
+                            <li><a class="dropdown-item" href="#">
+                                <img src="images/gear.png" alt="Icone engrenagem" width="12" height="12">
+                                <p>Configurações</p>
+                            </a></li>
+                            <li><a class="dropdown-item" href="#">
+                                <img src="images/logout-black.png" alt="Icone engrenagem" width="12" height="12">
+                                <p>Sair</p>
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </Header>
+
+    <main class="container">
+        
+        <div class="row justify-content-center">
+            <section id="cancelamento" class="my-5 col-12 col-lg-11 col-xxl-11">
+                <h1 id="myh1" class="text-center">Cancelamento de Protesto</h1>
+
+                <div class="row" id="mycontainer">
+                    <h2 id="myh2" class="mx-2" >Dados Solicitante
+                        <div class="row justify-content-start">
+                            <div class="col-12 barra-horizontal"></div>
+                        </div>
+                    </h2>
+                    <form class="form p-3">
+                        <div class="row justify-content-center p-1">
+                            <div class="col-12 col-md-6 col-lg-4 col-xxl-3 p-2">
+                                <input type="text" id="myinput" class="form-control" placeholder="Nome completo">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 col-xxl-3 p-2">
+                                <input type="number" id="myinput" class="form-control" placeholder="CPF/CNPJ">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 col-xxl-3 p-2">
+                                <input type="email" id="myinput" class="form-control" placeholder="email@exemplo.com">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 col-xxl-3 p-2">
+                                <input type="text" id="myinput" class="form-control" placeholder="Telefone">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 col-xxl-3 p-2">
+                                <input type="number" id="myinput" class="form-control" placeholder="CEP">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 col-xxl-3 p-2">
+                                <input type="text" id="myinput" class="form-control" placeholder="Rua">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 col-xxl-3 p-2">
+                                <input type="number" id="myinput" class="form-control" placeholder="Número">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 col-xxl-3 p-2">
+                                <input type="text" id="myinput" class="form-control" placeholder="Bairro">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 col-xxl-6 p-2">
+                                <input type="text" id="myinput" class="form-control" placeholder="Complemento">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-12 col-xxl-6 p-2">
+                                <input type="text" id="myinput" class="form-control" placeholder="Cidade">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+    
+                <div class="row mt-5" id="mycontainer">                    
+                    <h2 id="myh2" class="mx-2" >Dados do Devedor (Parte Protestada)
+                        <div class="row justify-content-start">
+                            <div class="col-12 barra-horizontal"></div>
+                        </div>
+                    </h2>
+                    <form class="form p-3">
+                        <div class="row justify-content-center p-1">
+                            <div class="col-12 col-md-6 col-lg-4 col-xxl-3 p-2">
+                                <input type="text" id="myinput" class="form-control" placeholder="Nome completo/Razão Social">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 col-xxl-3 p-2">
+                                <input type="number" id="myinput" class="form-control" placeholder="CPF/CNPJ">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 col-xxl-3 p-2">
+                                <input type="email" id="myinput" class="form-control" placeholder="email@exemplo.com">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 col-xxl-3 p-2">
+                                <input type="text" id="myinput" class="form-control" placeholder="Telefone">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 col-xxl-3 p-2">
+                                <input type="number" id="myinput" class="form-control" placeholder="CEP">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 col-xxl-3 p-2">
+                                <input type="text" id="myinput" class="form-control" placeholder="Rua">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 col-xxl-3 p-2">
+                                <input type="number" id="myinput" class="form-control" placeholder="Número">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 col-xxl-3 p-2">
+                                <input type="text" id="myinput" class="form-control" placeholder="Bairro">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 col-xxl-6 p-2">
+                                <input type="text" id="myinput" class="form-control" placeholder="Complemento">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-12 col-xxl-6 p-2">
+                                <input type="text" id="myinput" class="form-control" placeholder="Cidade">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+    
+                <div class="row mt-5" id="mycontainer">
+                    <h2 id="myh2" class="mx-2" >Informações do Protesto
+                        <div class="row justify-content-start">
+                            <div class="col-12 barra-horizontal"></div>
+                        </div>
+                    </h2>
+                    <form class="form p-3">
+                        <div class="row justify-content-center p-1">
+                            <div class="col-12 col-md-6 col-lg-4 col-xxl-3 p-2">
+                                <input type="text" id="myinput" class="form-control" placeholder="Número do título">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 col-xxl-3 p-2 form-floating" id="div_date">
+                                <label for="data_protesto" class="form-label">Data do protesto:</label>
+                                <input type="date" id="myinput" class="form-control" name="data_protesto">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 col-xxl-3 p-2">
+                                <input type="number" id="myinput" class="form-control" placeholder="Valor">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 col-xxl-3 p-2">
+                                <input type="text" id="myinput" class="form-control" placeholder="Cartório responsável">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 col-xxl-3 p-2">
+                                <input type="number" id="myinput" class="form-control" placeholder="CEP">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 col-xxl-3 p-2">
+                                <input type="text" id="myinput" class="form-control" placeholder="Rua">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 col-xxl-3 p-2">
+                                <input type="number" id="myinput" class="form-control" placeholder="Número">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 col-xxl-3 p-2">
+                                <input type="text" id="myinput" class="form-control" placeholder="Bairro">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 col-xxl-6 p-2">
+                                <input type="text" id="myinput" class="form-control" placeholder="Complemento">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-12 col-xxl-6 p-2">
+                                <input type="text" id="myinput" class="form-control" placeholder="Cidade">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+    
+                <div class="row mt-5" id="mycontainer">
+                    <h2 id="myh2" class="mx-2" >Informações do Título ou Documento Protestado
+                        <div class="row justify-content-start">
+                            <div class="col-12 barra-horizontal"></div>
+                        </div>
+                    </h2>
+                    <form class="form p-3">
+                        <div class="row justify-content-center p-1">
+                            <div class="col-12 col-lg-6 col-xxl-3 p-2">
+                                <select class="form-select" id="myinput" required>
+                                    <option value="" disabled selected>Selecione o tipo de título:</option>
+                                    <option value="1">Cheque</option>
+                                    <option value="2">Duplicata</option>
+                                    <option value="3">Nota Promissória</option>
+                                    <option value="4">Letra de Câmbio</option>
+                                    <option value="5">Contrato</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-lg-6 col-xxl-3 p-2">
+                                <input type="number" id="myinput" class="form-control" placeholder="Número do título/Documento">
+                            </div>
+                            <div class="col-12 col-lg-6 col-xxl-3 p-2 form-floating" id="div_date">
+                                <label for="data_protesto" class="form-label">Emissão:</label>
+                                <input type="date" id="myinput" class="form-control" name="data_protesto">
+                            </div>
+                            <div class="col-12 col-lg-6 col-xxl-3 p-2 form-floating" id="div_date">
+                                <label for="data_protesto" class="form-label">Vencimento:</label>
+                                <input type="date" id="myinput" class="form-control" name="data_protesto">
+                            </div>
+                            <div id="div_textarea" class="col-12 col-lg-12 col-xxl-12 p-2 form-floating">
+                                <textarea class="form-control" id="textarea_cancelamento"></textarea>
+                                <label for="textarea_cancelamento">Motivo do Cancelamento:</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+    
+                <h1 id="myh1" class="text-center">Anexos</h1>
+                <div class="row my-5" id="mycontainer">
+
+                     <div class="row justify-content-center mb-3 mx-2" id="linha_radio">
+                        <div class="col-12 col-lg-4 form-check d-flex justify-content-center align-items-center" id="div_radio">
+                            <input type="radio" class="form-check-input" name="inputRadio" id="inputRadioCA" value="1">
+                            <label class="form-check-label px-2 align-items-center" for="inputRadioCA">
+                                <h3>Carta de Anunência</h3>
+                            </label>
+                        </div>
+                        <div class="col-12 col-lg-4 form-check d-flex justify-content-center align-items-center" id="div_radio">
+                            <input type="radio" class="form-check-input" name="inputRadio" id="inputRadioIP" value="2">
+                            <label class="form-check-label px-2" for="inputRadioIP">
+                                <h3>Instrumento de Protesto</h3>
+                            </label>
+                        </div>
+                        <div class="col-12 col-lg-4 form-check d-flex justify-content-center align-items-center" id="div_radio">
+                            <input type="radio" class="form-check-input" name="inputRadio" id="inputRadioOF">
+                            <label class="form-check-label px-2" for="inputRadioOF">
+                                <h3>Ofício</h3>
+                            </label>
+                        </div>
+                     </div>
+
+                    <form class="form p-3">
+                        <div class="row justify-content-center p-1">
+
+                            <div class="col-12 col-lg-6 col-xxl-6 p-2">
+                                <h2 id="myh2" class="mx-1 py-2">Documentos pessoais Solicitante</h2>
+                                <div class="col-12 mb-3 barra-horizontal"></div>
+                                <input class="form-control" type="file" id="file_multiplo" multiple>
+                            </div>
+
+                            <div class="col-12 col-lg-6 col-xxl-6 p-2" id="fileCA">
+                                <h2 id="myh2" class="mx-1 py-2">Carta de anuência</h2>
+                                <div class="col-12 mb-3 barra-horizontal"></div>
+                                <input class="form-control" type="file" id="file_anuencia">
+                            </div>
+
+                            <div class="col-12 col-lg-6 col-xxl-6 p-2" id="fileIP">
+                                <h2 id="myh2" class="mx-1 py-2">Instrumento de protesto</h2>
+                                <div class="col-12 mb-3 barra-horizontal"></div>
+                                <input class="form-control" type="file" id="file_instrumento">
+                            </div>
+
+                            <div class="col-12 col-lg-6 col-xxl-6 p-2" id="fileOF">
+                                <h2 id="myh2" class="mx-1 py-2">Ofício</h2>
+                                <div class="col-12 mb-3 barra-horizontal"></div>
+                                <input class="form-control" type="file" id="file_procuracao">
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="row text-center">
+                    <div class="col-12 mt-5">
+                        <button class="btn p-3" id="mybtn">Enviar</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section id="adicionar_titulo">
+
+        </section>
+    </main>
+
+    <div class="row gx-0 justify-content-center mt-5">
+        <footer id="footer" class="col-12">
+            <div class="texto_footer d-flex justify-content-center mt-5 col-12">
+                <p>&copy; Todos os direiros reservados a Cartório Feiria</p>
+            </div>
+            <div>
+                <ul class="list_links d-flex justify-content-center col-12">
+                    <li><a href="https://instagram.com" target="_blank">
+                        <img src="images/instagram.png" alt="Logo instagram" width="40" height="40">
+                    </a></li>
+                    <li><a href="https://github.com" target="_blank">
+                        <img src="images/facebook.png" alt="Logo instagram" width="40" height="40">
+                    </a></li>
+                    <li><a href="https://br.linkedin.com" target="_blank">
+                        <img src="images/linkedin.png" alt="Logo instagram" width="40" height="40">
+                    </a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
+</body>
+</html>
